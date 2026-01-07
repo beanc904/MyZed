@@ -12,6 +12,32 @@
       // "shift shift": "file_finder::Toggle"
     },
   },
+  // ANCHOR: workspace switch
+  {
+    "context": "((VimControl && !menu) || (!Editor && !Terminal))",
+    "bindings": {
+      "ctrl-k": "workspace::ActivatePaneUp",
+    },
+  },
+  {
+    "context": "((VimControl && !menu) || (!Editor && !Terminal))",
+    "bindings": {
+      "ctrl-j": "workspace::ActivatePaneDown",
+    },
+  },
+  {
+    "context": "((VimControl && !menu) || (!Editor && !Terminal))",
+    "bindings": {
+      "ctrl-h": "workspace::ActivatePaneLeft",
+    },
+  },
+  {
+    "context": "((VimControl && !menu) || (!Editor && !Terminal))",
+    "bindings": {
+      "ctrl-l": "workspace::ActivatePaneRight",
+    },
+  },
+  // ANCHOR_END: workspace switch
   // ANCHOR: vim setup
   {
     "context": "Editor && vim_mode == insert && !menu",
@@ -96,13 +122,13 @@
   {
     "context": "(ProjectPanel && not_editing)",
     "bindings": {
-      "ctrl-v": "project_panel::OpenSplitVertical",
+      "alt-v": "project_panel::OpenSplitVertical",
     },
   },
   {
     "context": "(ProjectPanel && not_editing)",
     "bindings": {
-      "ctrl-h": "project_panel::OpenSplitHorizontal",
+      "alt-h": "project_panel::OpenSplitHorizontal",
     },
   },
   {
@@ -160,4 +186,12 @@
     },
   },
   // ANCHOR_END: ai prediction
+  // ANCHOR: zed small tools setup
+  {
+    "context": "((Editor && vim_mode == normal) && !menu)",
+    "bindings": {
+      "space i": "editor::ToggleInlayHints",
+    },
+  },
+  // ANCHOR_END: zed small tools setup
 ]
