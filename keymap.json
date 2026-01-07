@@ -1,0 +1,163 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      // "shift shift": "file_finder::Toggle"
+    },
+  },
+  // ANCHOR: vim setup
+  {
+    "context": "Editor && vim_mode == insert && !menu",
+    "bindings": {
+      "j k": "vim::SwitchToNormalMode",
+    },
+  },
+  {
+    "context": "Editor && vim_mode == normal && !menu",
+    "bindings": {
+      "space f m": "editor::Format",
+      "space x": "pane::CloseActiveItem",
+      "space t": "outline::Toggle",
+      "space o": "outline_panel::ToggleFocus",
+      "space h": "terminal_panel::ToggleFocus",
+    },
+  },
+  {
+    "context": "((vim_mode == normal) || (vim_mode == helix_normal && !menu) || (!Editor && !Terminal) || (ProjectPanel && not_editing))",
+    "bindings": {
+      ";": "command_palette::Toggle",
+    },
+  },
+  // ANCHOR_END: vim setup
+  // ANCHOR: vim Tab select
+  {
+    "context": "(VimControl && !menu)",
+    "bindings": {
+      "tab": "vim::GoToTab",
+    },
+  },
+  {
+    "context": "(VimControl && !menu)",
+    "bindings": {
+      "shift-tab": "vim::GoToPreviousTab",
+    },
+  },
+  // ANCHOR_END: vim Tab select
+  // ANCHOR: project panel setup
+  {
+    "context": "(ProjectPanel && not_editing)",
+    "bindings": {
+      "o": "project_panel::Open",
+    },
+  },
+  {
+    "context": "(ProjectPanel && not_editing)",
+    "bindings": {
+      "r": "project_panel::Rename",
+    },
+  },
+  {
+    "context": "(ProjectPanel && not_editing)",
+    "bindings": {
+      "a": "project_panel::NewFile",
+    },
+  },
+  {
+    "context": "(ProjectPanel && not_editing)",
+    "bindings": {
+      "x": "project_panel::Cut",
+    },
+  },
+  {
+    "context": "(ProjectPanel && not_editing)",
+    "bindings": {
+      "p": "project_panel::Paste",
+    },
+  },
+  {
+    "context": "(ProjectPanel && not_editing)",
+    "bindings": {
+      "d": "project_panel::Delete",
+    },
+  },
+  {
+    "context": "(ProjectPanel && not_editing)",
+    "bindings": {
+      "c": "project_panel::Copy",
+    },
+  },
+  {
+    "context": "(ProjectPanel && not_editing)",
+    "bindings": {
+      "ctrl-v": "project_panel::OpenSplitVertical",
+    },
+  },
+  {
+    "context": "(ProjectPanel && not_editing)",
+    "bindings": {
+      "ctrl-h": "project_panel::OpenSplitHorizontal",
+    },
+  },
+  {
+    "context": "((Editor && vim_mode == normal) && !menu)",
+    "bindings": {
+      "space e": "project_panel::ToggleFocus",
+    },
+  },
+  // ANCHOR_END: project panel setup
+  // ANCHOR: outline panel setup
+  {
+    "context": "(OutlinePanel && not_editing)",
+    "bindings": {
+      "l": "outline_panel::ExpandSelectedEntry",
+    },
+  },
+  {
+    "context": "(OutlinePanel && not_editing)",
+    "bindings": {
+      "h": "outline_panel::CollapseSelectedEntry",
+    },
+  },
+  {
+    "context": "(OutlinePanel && not_editing)",
+    "bindings": {
+      "o": "outline_panel::OpenSelectedEntry",
+    },
+  },
+  // ANCHOR_END: outline panel setup
+  // ANCHOR: editor context menu select
+  {
+    "context": "(Editor && (showing_code_actions || showing_completions))",
+    "bindings": {
+      "shift-tab": "editor::ContextMenuPrevious",
+    },
+  },
+  {
+    "context": "(Editor && (showing_code_actions || showing_completions))",
+    "bindings": {
+      "tab": "editor::ContextMenuNext",
+    },
+  },
+  // ANCHOR_END: editor context menu select
+  // ANCHOR: ai prediction
+  {
+    "context": "(Editor && edit_prediction)",
+    "bindings": {
+      "ctrl-l": "editor::AcceptEditPrediction",
+    },
+  },
+  {
+    "context": "(Editor && edit_prediction)",
+    "bindings": {
+      "tab": null,
+    },
+  },
+  // ANCHOR_END: ai prediction
+]
