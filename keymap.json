@@ -86,6 +86,12 @@
   {
     "context": "(ProjectPanel && not_editing)",
     "bindings": {
+      "l": "project_panel::OpenPermanent",
+    },
+  },
+  {
+    "context": "(ProjectPanel && not_editing)",
+    "bindings": {
       "r": "project_panel::Rename",
     },
   },
@@ -186,6 +192,20 @@
     },
   },
   // ANCHOR_END: ai prediction
+  // ANCHOR: vim-surround setup
+  {
+    "context": "((vim_mode == normal || vim_mode == helix_normal) && !menu)",
+    "bindings": {
+      "shift-s": null,
+    },
+  },
+  {
+    "context": "vim_mode == visual",
+    "bindings": {
+      "shift-s": "vim::PushAddSurrounds",
+    },
+  },
+  // ANCHOR_END: vim-surround setup
   // ANCHOR: zed small tools setup
   {
     "context": "((Editor && vim_mode == normal) && !menu)",
@@ -193,5 +213,4 @@
       "space i": "editor::ToggleInlayHints",
     },
   },
-  // ANCHOR_END: zed small tools setup
 ]
