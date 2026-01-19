@@ -49,5 +49,6 @@
     "html": true,
     "toml": true,
     "make": true,
+    "markdown-oxide": true,
   },
 }
