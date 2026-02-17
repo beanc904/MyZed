@@ -49,6 +49,7 @@
     "context": "Editor && vim_mode == normal && !menu",
     "bindings": {
       "space f m": "editor::Format",
+      "space r n": "editor::Rename",
       "space x": "pane::CloseActiveItem",
       "space t": "outline::Toggle",
       "space o": "outline_panel::ToggleFocus",
