@@ -7,9 +7,6 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-  "edit_predictions": {
-    "provider": "copilot",
-  },
   "auto_update": false,
   "agent": {
     "default_profile": "ask",
@@ -20,6 +17,9 @@
     "model_parameters": [],
   },
   "show_edit_predictions": false,
+  "features": {
+    "edit_prediction_provider": "copilot",
+  },
   "icon_theme": "Catppuccin Mocha",
   "base_keymap": "VSCode",
   "ui_font_size": 16,
