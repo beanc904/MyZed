@@ -40,7 +40,7 @@
   // ANCHOR_END: workspace switch
   // ANCHOR: vim setup
   {
-    "context": "Editor && vim_mode == insert && !menu",
+    "context": "Editor && vim_mode == insert",
     "bindings": {
       "j k": "vim::SwitchToNormalMode",
     },
@@ -50,10 +50,12 @@
     "bindings": {
       "space f m": "editor::Format",
       "space r n": "editor::Rename",
+      "space d x": "diagnostics::Deploy",
       "space x": "pane::CloseActiveItem",
       "space t": "outline::Toggle",
       "space o": "outline_panel::ToggleFocus",
       "space h": "terminal_panel::ToggleFocus",
+      "space i": "editor::ToggleInlayHints",
     },
   },
   {
@@ -207,11 +209,18 @@
     },
   },
   // ANCHOR_END: vim-surround setup
-  // ANCHOR: zed small tools setup
+  // ANCHOR: some other keybind
+
   {
-    "context": "((Editor && vim_mode == normal) && !menu)",
+    "context": "(VimControl && !menu)",
     "bindings": {
-      "space i": "editor::ToggleInlayHints",
+      "g r": "editor::FindAllReferences",
+    },
+  },
+  {
+    "context": "(VimControl && !menu)",
+    "bindings": {
+      "g r r": null,
     },
   },
 ]
