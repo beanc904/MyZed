@@ -8,7 +8,7 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
   "git_panel": {
-    "tree_view": true
+    "tree_view": true,
   },
   "edit_predictions": {
     "provider": "copilot",
@@ -54,5 +54,7 @@
     "toml": true,
     "make": true,
     "markdown-oxide": true,
+    "dockerfile": true,
+    "docker-compose": true,
   },
 }
