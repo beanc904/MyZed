@@ -56,5 +56,6 @@
     "markdown-oxide": true,
     "dockerfile": true,
     "docker-compose": true,
+    "neocmake": true,
   },
 }
