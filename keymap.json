@@ -48,15 +48,15 @@
   {
     "context": "Editor && vim_mode == normal && !menu",
     "bindings": {
-      "space f m": "editor::Format",
-      "space r n": "editor::Rename",
-      "space d x": "diagnostics::Deploy",
-      "space x": "pane::CloseActiveItem",
-      "space t": "outline::Toggle",
-      "space o": "outline_panel::ToggleFocus",
-      "space h": "terminal_panel::ToggleFocus",
-      "space i": "editor::ToggleInlayHints",
-      "space n": "editor::ToggleRelativeLineNumbers",
+      "space l f": "editor::Format",
+      "space l r": "editor::Rename",
+      "space l d": "diagnostics::Deploy",
+      "space l s": "outline::Toggle",
+      "space l S": "outline_panel::Toggle",
+      "space t h": "terminal_panel::ToggleFocus",
+      "space u h": "editor::ToggleInlayHints",
+      "space c": "pane::CloseActiveItem",
+      "space N": "editor::ToggleRelativeLineNumbers",
     },
   },
   {
@@ -144,7 +144,13 @@
   {
     "context": "((Editor && vim_mode == normal) && !menu)",
     "bindings": {
-      "space e": "project_panel::ToggleFocus",
+      "space o": "project_panel::ToggleFocus",
+    },
+  },
+  {
+    "context": "((Editor && vim_mode == normal) && !menu) || ProjectPanel",
+    "bindings": {
+      "space e": "project_panel::Toggle",
     },
   },
   // ANCHOR_END: project panel setup
@@ -211,17 +217,4 @@
   },
   // ANCHOR_END: vim-surround setup
   // ANCHOR: some other keybind
-
-  {
-    "context": "(VimControl && !menu)",
-    "bindings": {
-      "g r": "editor::FindAllReferences",
-    },
-  },
-  {
-    "context": "(VimControl && !menu)",
-    "bindings": {
-      "g r r": null,
-    },
-  },
 ]
