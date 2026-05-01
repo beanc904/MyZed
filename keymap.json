@@ -55,8 +55,10 @@
       "space l S": "outline_panel::Toggle",
       "space t h": "terminal_panel::ToggleFocus",
       "space u h": "editor::ToggleInlayHints",
+      "space w": "workspace::Save",
       "space c": "pane::CloseActiveItem",
       "space N": "editor::ToggleRelativeLineNumbers",
+      "|": "pane::SplitVertical",
     },
   },
   {
