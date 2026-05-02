@@ -14,26 +14,11 @@
   },
   // ANCHOR: workspace switch
   {
-    "context": "((VimControl && !menu) || (!Editor && !Terminal))",
+    "context": "((VimControl && !menu) || !Editor)",
     "bindings": {
       "ctrl-k": "workspace::ActivatePaneUp",
-    },
-  },
-  {
-    "context": "((VimControl && !menu) || (!Editor && !Terminal))",
-    "bindings": {
       "ctrl-j": "workspace::ActivatePaneDown",
-    },
-  },
-  {
-    "context": "((VimControl && !menu) || (!Editor && !Terminal))",
-    "bindings": {
       "ctrl-h": "workspace::ActivatePaneLeft",
-    },
-  },
-  {
-    "context": "((VimControl && !menu) || (!Editor && !Terminal))",
-    "bindings": {
       "ctrl-l": "workspace::ActivatePaneRight",
     },
   },
@@ -59,6 +44,7 @@
       "space c": "pane::CloseActiveItem",
       "space N": "editor::ToggleRelativeLineNumbers",
       "|": "pane::SplitVertical",
+      "\\": "pane::SplitHorizontal",
     },
   },
   {
