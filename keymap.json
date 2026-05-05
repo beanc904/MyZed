@@ -43,8 +43,6 @@
       "space w": "workspace::Save",
       "space c": "pane::CloseActiveItem",
       "space N": "editor::ToggleRelativeLineNumbers",
-      "|": "pane::SplitVertical",
-      "\\": "pane::SplitHorizontal",
     },
   },
   {
@@ -53,6 +51,8 @@
       ";": "command_palette::Toggle",
       "tab": "pane::ActivateNextItem",
       "shift-tab": "pane::ActivatePreviousItem",
+      "|": "pane::SplitAndMoveRight",
+      "\\": "pane::SplitAndMoveDown",
     },
   },
   // ANCHOR_END: vim setup
