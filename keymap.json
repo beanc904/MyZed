@@ -51,8 +51,10 @@
       ";": "command_palette::Toggle",
       "tab": "pane::ActivateNextItem",
       "shift-tab": "pane::ActivatePreviousItem",
-      "|": "pane::SplitAndMoveRight",
-      "\\": "pane::SplitAndMoveDown",
+      "|": "pane::SplitVertical",
+      "\\": "pane::SplitHorizontal",
+      "ctrl-|": "pane::SplitAndMoveRight",
+      "ctrl-\\": "pane::SplitAndMoveDown",
     },
   },
   // ANCHOR_END: vim setup
