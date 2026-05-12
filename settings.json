@@ -9,13 +9,13 @@
 {
   "cli_default_open_behavior": "new_window",
   "project_panel": {
-    "dock": "left"
+    "dock": "left",
   },
   "outline_panel": {
-    "dock": "left"
+    "dock": "left",
   },
   "collaboration_panel": {
-    "dock": "left"
+    "dock": "left",
   },
   "focus_follows_mouse": {
     "enabled": true,
@@ -38,7 +38,7 @@
     "model_parameters": [],
   },
   "show_edit_predictions": false,
-  "icon_theme": "Catppuccin Mocha",
+  "icon_theme": "Material Icon Theme",
   "base_keymap": "VSCode",
   "ui_font_size": 16,
   "buffer_font_family": "Maple Mono NF",
@@ -46,9 +46,9 @@
   "buffer_line_height": "standard",
   "vim_mode": true,
   "theme": {
-    "mode": "system",
+    "mode": "dark",
     "light": "Catppuccin Mocha",
-    "dark": "Catppuccin Mocha",
+    "dark": "Ayu Darker",
   },
   "terminal": {
     "line_height": "standard",
@@ -64,6 +64,8 @@
   "auto_install_extensions": {
     "catppuccin": true,
     "catppuccin-icons": true,
+    "ayu-darker": true,
+    "material-icon-theme": true,
     "git-firefly": true,
     "html": true,
     "toml": true,
