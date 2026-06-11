@@ -7,6 +7,31 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "language_models": {
+    "lmstudio": {
+      "api_url": "http://127.0.0.1:1234/api/v1",
+    },
+  },
+  "wsl_connections": [
+    {
+      "distro_name": "Ubuntu-24.04",
+      "user": null,
+      "projects": [
+        {
+          "paths": ["/home/coffeebean/code/akasha"],
+        },
+        {
+          "paths": ["/home/coffeebean/code/beanc904.github.io"],
+        },
+        {
+          "paths": ["/home/coffeebean/code/clash-verge-rev"],
+        },
+        {
+          "paths": ["/home/coffeebean/code/demo"],
+        },
+      ],
+    },
+  ],
   "cli_default_open_behavior": "new_window",
   "project_panel": {
     "dock": "left",
@@ -32,13 +57,17 @@
     "dock": "right",
     "default_profile": "ask",
     "default_model": {
-      "provider": "copilot_chat",
-      "model": "gpt-5-mini",
+      "provider": "lmstudio",
+      "model": "qwen2.5-coder-7b-instruct",
     },
     "model_parameters": [],
   },
   "show_edit_predictions": false,
-  "icon_theme": "Material Icon Theme",
+  "icon_theme": {
+    "mode": "system",
+    "light": "Catppuccin Latte",
+    "dark": "Catppuccin Mocha",
+  },
   "base_keymap": "VSCode",
   "ui_font_size": 16,
   "buffer_font_family": "Maple Mono NF",
@@ -46,9 +75,9 @@
   "buffer_line_height": "standard",
   "vim_mode": true,
   "theme": {
-    "mode": "dark",
-    "light": "Catppuccin Mocha",
-    "dark": "Ayu Darker",
+    "mode": "system",
+    "light": "Catppuccin Latte",
+    "dark": "Catppuccin Mocha",
   },
   "terminal": {
     "line_height": "standard",
